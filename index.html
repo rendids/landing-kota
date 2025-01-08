@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing Page Kota Ponorogo</title>
+    <style>
+        /* General styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #004d00;
+            padding: 10px 20px;
+        }
+
+        nav {
+            position: relative;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Burger Button (for small screens) */
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .burger div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://mediaponorogo.com/wp-content/uploads/2022/08/IMG_20220811_140358.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        /* About Section */
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .about .text {
+            flex: 1;
+            padding-right: 20px;
+            max-width: 500px;
+        }
+
+        .about .text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .about .text p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .about img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        /* Tourism Section */
+        .tourism {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .tourism h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .tourism p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .tourism ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .tourism ul li {
+            font-size: 1.2rem;
+            margin: 5px 0;
+        }
+
+        .tourism img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #004d00;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                background-color: #004d00;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                padding: 10px 0;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                font-size: 20px;
+            }
+
+            .burger {
+                display: flex;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            /* About Section Responsive */
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about .text {
+                padding-right: 0;
+                max-width: 100%;
+            }
+
+            .about img {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .about h2, .tourism h2 {
+                font-size: 1.5rem;
+            }
+
+            .about p, .tourism p {
+                font-size: 0.9rem;
+            }
+
+            .tourism ul li {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <!-- Burger Button -->
+            <div class="burger" id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tentang Ponorogo</a></li>
+                <li><a href="#">Wisata</a></li>
+                <li><a href="#">Kuliner</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Selamat Datang di Kota Ponorogo</h1>
+            <p>Temukan keindahan alam dan budaya Ponorogo yang mempesona!</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="text">
+            <h2>Tentang Kota Ponorogo</h2>
+            <p>Ponorogo adalah kota yang terletak di Jawa Timur, terkenal dengan budaya Reog dan keindahan alamnya yang luar biasa.</p>
+        </div>
+        <img src="https://redaktur.tvrinews.com/storage/images/upload/3ae5cae0-26e2-4ded-aa51-8c4ddb51d040.jpeg" alt="Ponorogo" />
+    </section>
+
+    <!-- Wisata Section -->
+    <section class="tourism">
+        <h2>Wisata di Ponorogo</h2>
+        <p>Kota Ponorogo memiliki banyak tempat wisata menarik, termasuk Alam dan Budaya Reog.</p>
+        <ul>
+            <li>Air Terjun Widodaren</li>
+            <li>Reog Ponorogo</li>
+        </ul>
+        <img src="https://imgcdn.espos.id/@espos/images/2016/04/air-terjun-pletuk.jpg?quality=60" alt="Air Terjun Sewaung" />
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Kota Ponorogo. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript to toggle menu -->
+    <script>
+        const burger = document.getElementById('burger');
+        const menu = document.getElementById('menu');
+
+        burger.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
